@@ -1,0 +1,16 @@
+clubConnect/dao/EventDAO.class
+clubConnect/dao/MetricsDAO$Metrics.class
+clubConnect/dao/StudentDAO.class
+clubConnect/dao/InterestDAO.class
+clubConnect/service/ClubService.class
+clubConnect/model/Club.class
+clubConnect/model/Event$Builder.class
+clubConnect/dao/FeedbackDAO.class
+clubConnect/dao/ClubDAO.class
+tools/SeedGenerator.class
+clubConnect/clubConnectCLI.class
+clubConnect/dao/RSVPDAO.class
+clubConnect/dao/MetricsDAO.class
+clubConnect/model/Event.class
+clubConnect/model/Student.class
+clubConnect/util/DBConnection.class

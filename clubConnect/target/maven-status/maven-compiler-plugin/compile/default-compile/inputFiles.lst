@@ -1,0 +1,14 @@
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/clubConnectCLI.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/ClubDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/EventDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/FeedbackDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/InterestDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/MetricsDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/RSVPDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/dao/StudentDAO.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/model/Club.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/model/Event.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/model/Student.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/service/ClubService.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/clubConnect/util/DBConnection.java
+/Users/shadowmonarch/Desktop/labtest/clubConnect/src/main/java/tools/SeedGenerator.java

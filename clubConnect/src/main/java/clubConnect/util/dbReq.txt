@@ -1,0 +1,72 @@
+create database clubConnect;
+use clubConnect;
+CREATE TABLE student (
+    studentID INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(70) NOT NULL,
+    email VARCHAR(70) UNIQUE NOT NULL,
+    password VARCHAR(70) NOT NULL
+);
+create table interests(
+	 studentID INT,
+	tags VARCHAR(70),
+	  PRIMARY KEY (studentID, tags),
+	  FOREIGN KEY (studentID) REFERENCES Student(studentID)
+);
+CREATE TABLE events (
+    eventID INT PRIMARY KEY AUTO_INCREMENT,
+    clubID INT NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    venue VARCHAR(150) NOT NULL,
+    capacity INT NOT NULL,
+    regFee DECIMAL(10,2),
+    tags TEXT, -- comma-separated tags as a string
+
+    FOREIGN KEY (clubID) REFERENCES clubs(clubID)
+);
+CREATE TABLE clubs (
+    clubID INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE RSVP (
+    studentID INT,
+    eventID INT,
+    status VARCHAR(20),
+    PRIMARY KEY (studentID, eventID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID),
+    FOREIGN KEY (eventID) REFERENCES events(eventID)
+);
+
+-- === Clubs & Admins ====================================
+ALTER TABLE clubs ADD COLUMN description TEXT,
+                   ADD COLUMN category  VARCHAR(50),
+                   ADD COLUMN logoPath VARCHAR(255);
+
+CREATE TABLE club_admins(
+    clubID  INT,
+    studentID INT,
+    PRIMARY KEY (clubID, studentID),
+    FOREIGN KEY (clubID)  REFERENCES clubs(clubID),
+    FOREIGN KEY (studentID) REFERENCES student(studentID)
+);
+
+-- === Feedback & Metrics ================================
+CREATE TABLE feedback(
+    eventID  INT,
+    studentID INT,
+    rating   TINYINT,        -- 1-5
+    comment  TEXT,
+    PRIMARY KEY(eventID,studentID),
+    FOREIGN KEY(eventID)  REFERENCES events(eventID),
+    FOREIGN KEY(studentID) REFERENCES student(studentID)
+);
+
+CREATE TABLE event_metrics(
+    eventID INT PRIMARY KEY,
+    recommended INT DEFAULT 0,
+    clicks      INT DEFAULT 0
+);
